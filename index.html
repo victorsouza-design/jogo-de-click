@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Click</title>
+
+</head>
+
+<body>
+
+    <!-- Conectando o JavaScript-->
+    <!-- <script src="script.js"></script> -->
+
+    <!-- conectando CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <h1>jogo de click</h1>
+
+    <p>pontos: <span id="pontos">0</span></p>
+    <p>valor por click: <span id="ValorClick">1</span></p>
+    <p>Upgrades: <span id="upgrades">0</span></p>
+
+    <button id="botaocrlicker">Click Aqui</button>
+
+    <h2>loja</h2>
+
+    <button onclick="comprarUpgrade(10, 1)">
+        Upgrade 1 (+1) - 10 pontos
+    </button>
+
+    <button onclick="comprarUpgrade(50, 8)">
+        Upgrade 2 (+8) - 50 pontos
+    </button>
+
+    <button onclick="comprarUpgrade(100, 32)">
+        Upgrade 3 (+32) - 100 pontos
+    </button>
+    <script>
+
+
+        document.getElementById("botaocrlicker").onclick = function () {
+            alert("clicou");
+        };
+
+        let pontos = 0;
+        let Valorclique = 1;
+        let upgrade = 0;
+
+        // clique principal 
+        document.getElementById("botaocrlicker").onclick = function () {
+            pontos = pontos + Valorclique;
+            document.getElementById("pontos").textContent = pontos;
+            document.getElementById("ValorClick").textContent = Valorclique;
+            document.getElementById("upgrades").textContent = upgrade;
+
+            if (pontos >= 500) {
+                alert("você Venceu!")
+            }
+        };
+
+        // função para comprar upgrade
+        function comprarUpgrade(custo, aumnento) {
+            if (pontos >= custo) {
+                pontos = pontos - custo;
+                Valorclique = Valorclique + aumnento;
+                upgrade++;
+
+                document.getElementById("pontos").textContent = pontos;
+                document.getElementById("ValorClick").textContent = Valorclique;
+                document.getElementById("upgrades").textContent = upgrade;
+            } else {
+                alert("pontos insuficientes!");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

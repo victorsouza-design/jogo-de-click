@@ -1,0 +1,23 @@
+CSS
+
+Body {
+    font-family: arial;
+    text-align: center;
+    background-color: #eaeaea;
+}
+
+H1{
+    color: #333;
+}
+
+Button {
+    padding: 10px;
+    margin: 10;
+    font-style: 16px;
+    cursor: pointer;
+}
+
+#botaoClick {
+    background-color: green;
+    color: white;
+}
