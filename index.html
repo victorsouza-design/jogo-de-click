@@ -22,7 +22,7 @@
     <p>valor por click: <span id="ValorClick">1</span></p>
     <p>Upgrades: <span id="upgrades">0</span></p>
 
-    <button id="botaocrlicker">Click Aqui</button>
+    <button id="botaoclique">Click Aqui</button>
 
     <h2>loja</h2>
 
@@ -40,7 +40,7 @@
     <script>
 
 
-        document.getElementById("botaocrlicker").onclick = function () {
+        document.getElementById("botaoclique").onclick = function () {
             alert("clicou");
         };
 
@@ -49,7 +49,7 @@
         let upgrade = 0;
 
         // clique principal 
-        document.getElementById("botaocrlicker").onclick = function () {
+        document.getElementById("botaoclique").onclick = function () {
             pontos = pontos + Valorclique;
             document.getElementById("pontos").textContent = pontos;
             document.getElementById("ValorClick").textContent = Valorclique;
@@ -75,6 +75,9 @@
             }
         }
 
+        <button onclick="comprarupgrade()">
+            // upgrade (+1) - <span id="custoupgrade">10</span>
+            </button>
 
     </script>
 </body>
